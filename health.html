@@ -2,20 +2,60 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <style>
+ {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.Lcolumn {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+.Rcolumn {
+  float: right;
+  width: 20%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+/* Clear floats after the columns */
+h2.a {
+  font-family: Impact, Charcoal, sans-serif;
+}
+p.b {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+</style>
     <title></title>
   <!--  <link rel="stylesheet" href="health.css">//-->
+
   </head>
   <body>
 <body bgcolor= #ac39ac>
   <center>
   <h1> Title </h1>
   <a href="mental.html">
-  <button style="width: 90px; height: 60px; border-radius: 12px; margin:15px;"> Mental </button>
+  <button style="width: 200px; height: 60px; border-radius: 12px; margin:15px;background-color:#cc0066;font-size: 20px"> Mental </button>
   </a>
   <a href="physical.html">
-  <button style="width: 90px; height: 60px;border-radius: 12px;"> Physical</button>
+  <button style="width: 200px; height: 60px;border-radius: 12px;background-color:#cc0066;font-size: 20px;"> Physical</button>
   </a>
   <br>
+  <div class="row">
+    <div class="Lcolumn" style="background-color:#ffa64d;">
+      <h2 class ="a">About the site</h2>
+      <p class= "b"> This site aims to simplify your research of the symptoms you may be expriencing from a potential illness. Tell us where you're hurting and we'll give
+      you trust worthy tips to follow for a period of time. If those tips don't work, we'll direct you to a doctor that speacializes in that area near you!</p>
+    </div>
+  </div>
+    <div class="Rcolumn" style="background-color:#ffa64d;">
+      <h2 class ="a">About us</h2>
+      <p class= "b">Whenever we search any symptoms of a potentiall illnes we're
+      coming down with, the sites that we come across are too general or overlly exaggerated
+      . To combat this, we sought to reduce that by directing the user to trustworthy tip and a doctor.</p>
+    </div>
 <img src="https://www.tafecourses.com.au/wp-content/uploads/best-health-careers-that-require-postgraduate-courses-tc-feature.png" alt= "health pic" width= 800 height=500>
   </center>
   </body>
