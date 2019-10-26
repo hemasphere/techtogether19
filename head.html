@@ -1,8 +1,54 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <title>Geocoding Service</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
+<<<<<<< HEAD
     <title></title>
+    <style>
+    body{
+      background-color: #ADD8E6;
+    }
+
+    .grid_container {
+      display: grid;
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-gap: 10px;
+      padding: 30px;
+      border-radius: 25px;
+    }
+=======
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #floating-panel {
+        position: ;
+        top: 10px;
+        left: 25%;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+      }
+>>>>>>> 747431e986e2ec271daada2cbeb68941d541973d
+    </style>
   </head>
   <body>
     <div class ="grid_container">
@@ -56,7 +102,52 @@
     <li>Use a humidifier or vaporizer</li>
     <li>Place a warm wet towel on your face to relief discomfort and open your nasal passages</li></div>
   </div>
+<<<<<<< HEAD
+  <font size = 5pt> <center>
     <p>If the tips above don't seem to work within 5-7 days, you should consult with a doctor near you.
+      <br>
     Click <a href = "https://www.google.com/maps">here </a> to find a doctor near you!</p>
+=======
+  <p>If the tips above don't seem to work within 5-7 days, you should consult with a doctor near you.</p>
+</div>
+
+  <div id="floating-panel">
+  <input id="address" type="textbox" value="Sydney, NSW">
+  <input id="submit" type="button" value="Geocode">
+</div>
+<div id="map"></div>
+
+  <script>
+    function initMap() {
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 8,
+        center: {lat: -34.397, lng: 150.644}
+      });
+      var geocoder = new google.maps.Geocoder();
+
+      document.getElementById('submit').addEventListener('click', function() {
+        geocodeAddress(geocoder, map);
+      });
+    }
+
+    function geocodeAddress(geocoder, resultsMap) {
+      var address = document.getElementById('address').value;
+      geocoder.geocode({'address': address}, function(results, status) {
+        if (status === 'OK') {
+          resultsMap.setCenter(results[0].geometry.location);
+          var marker = new google.maps.Marker({
+            map: resultsMap,
+            position: results[0].geometry.location
+          });
+        } else {
+          alert('Geocode was not successful for the following reason: ' + status);
+        }
+      });
+    }
+  </script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAofONKNlfNUoshxkXuUotPuYVmyP_Dayo&callback=initMap">
+  </script>
+>>>>>>> 747431e986e2ec271daada2cbeb68941d541973d
   </body>
 </html>
