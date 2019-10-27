@@ -80,46 +80,46 @@
       consider consulting a doctor near you.
     </font size = 5pt> </center>
     <div id="floating-panel">
-      <b>Start: </b>
-      <select id="start" onchange="calcRoute();">
-        <option value="New York">New York</option>
-        <option value="Wyoming">Wyoming</option>
-        <option value="Arkansas">Arkansas</option>
-        <option value="oklahoma city, ok">Oklahoma City</option>
-        <option value="amarillo, tx">Amarillo</option>
-        <option value="gallup, nm">Gallup, NM</option>
-        <option value="flagstaff, az">Flagstaff, AZ</option>
-        <option value="winona, az">Winona</option>
-        <option value="kingman, az">Kingman</option>
-        <option value="barstow, ca">Barstow</option>
-        <option value="san bernardino, ca">San Bernardino</option>
-        <option value="los angeles, ca">Los Angeles</option>
-      </select>
-      <b>End: </b>
-      <select id="end" onchange="calcRoute();">
-        <option value="fm">Family Medicine</option>
-        <option value="Optometrist">Optometrist</option>
-        <option value="Radiology">JRadiology</option>
-        <option value="pmr"> Physical Medicine & Rehabilitation</option>
-        <option value="amarillo, tx">Amarillo</option>
-        <option value="fm">Family Medicine</option>
-        <option value="pmr">Physical Medicine & Rehabilitation</option>
-        <option value="winona, az">Winona</option>
-        <option value="kingman, az">Kingman</option>
-        <option value="o&g">Obstetrics & Gynecology</option>
-        <option value="fm">Family Medicine</option>
-        <option value="oag">Obstetrics & Gynecology</option>
-      </select>
+        <b>Start: </b>
+        <select id="start" onchange="calcRoute();">
+          <option value="New York">New York</option>
+          <option value="Wyoming">Wyoming</option>
+          <option value="Arkansas">Arkansas</option>
+          <option value="oklahoma city, ok">Oklahoma City</option>
+          <option value="amarillo, tx">Amarillo</option>
+          <option value="gallup, nm">Gallup, NM</option>
+          <option value="flagstaff, az">Flagstaff, AZ</option>
+          <option value="winona, az">Winona</option>
+          <option value="kingman, az">Kingman</option>
+          <option value="barstow, ca">Barstow</option>
+          <option value="san bernardino, ca">San Bernardino</option>
+          <option value="los angeles, ca">Los Angeles</option>
+        </select>
+        <b>End: </b>
+        <select id="end" onchange="calcRoute();">
+          <option value="richmond hill, ny">Family Medicine</option>
+          <option value="forest hills, ny">Optometrist</option>
+          <option value="long island, ny">JRadiology</option>
+          <option value="pmr"> Physical Medicine & Rehabilitation</option>
+          <option value="amarillo, tx">Amarillo</option>
+          <option value="fm">Family Medicine</option>
+          <option value="pmr">Physical Medicine & Rehabilitation</option>
+          <option value="winona, az">Winona</option>
+          <option value="kingman, az">Kingman</option>
+          <option value="o&g">Obstetrics & Gynecology</option>
+          <option value="fm">Family Medicine</option>
+          <option value="oag">Obstetrics & Gynecology</option>
+        </select>
         </div>
         <div id="map"></div>
         <script>
         function initMap() {
-        var directionsService = new google.maps.DirectionsService();
-        var directionsRenderer = new google.maps.DirectionsRenderer();
-        var chicago = new google.maps.LatLng(41.850033, -87.6500523);
+        directionsService = new google.maps.DirectionsService();
+        directionsRenderer = new google.maps.DirectionsRenderer();
+        var newyork = new google.maps.LatLng(40.730610, -73.935242);
         var mapOptions = {
           zoom:7,
-          center: chicago
+          center: newyork
         }
         var map = new google.maps.Map(document.getElementById('map'), mapOptions);
         directionsRenderer.setMap(map);
@@ -141,7 +141,7 @@
       }
         </script>
         <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAofONKNlfNUoshxkXuUotPuYVmyP_Dayo&callback=initMap">
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAofONKNlfNUoshxkXuUotPuYVmyP_Dayo&callback=initMap" type="text/javascript">
         </script>
     <!-- Click <a href = "https://www.google.com/maps">here </a> to find a doctor near you!</p> -->
 
